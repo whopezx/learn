@@ -1,0 +1,5 @@
+# this is a test file and a explain file.
+
+test 'git rm'
+
+1. git rm, this command can remove file in repository. But cannot remove file after 'git add' because after add, repository file do not change. that is 'git rm' remove file from workfile and add this change to 'stage' and repository do not change. If want to cancel 'git rm', one should use 'git reset HEAD <file>' in liaoxuefeng recommand or 'git restore --stage <file>' in git recommand to move file in stage to workfile. And 'git checkout -- <file>'
