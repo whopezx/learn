@@ -6,3 +6,4 @@ test 'git rm'
 
 2. git branch -b <branch name>, this command create a branch and switch to this new branch. Equivalent to 'git branch <branch name>' and 'git checkout <branch name>'. only use 'git branch' will display all branch and branch name with * in front it is this branch. Use 'git branch -d <branch name>' to delete the branch.
 this command is same with git switch -c <branch name>. Use git switch <branch name> can switch branch. But check branch still use 'git branch'
+In different branch, change workfile will same change in other branch
