@@ -2,9 +2,9 @@
 
 1. git rm, this command can remove file in repository. But cannot remove file after 'git add' because after add, repository file do not change. that is 'git rm' remove file from workfile and add this change to 'stage' and repository do not change. If want to cancel 'git rm', one should use 'git reset HEAD <file>' in liaoxuefeng recommand or 'git restore --stage <file>' in git recommand to move file in stage to workfile. And 'git checkout -- <file>'
 
-2. git branch -b <branch name>, this command create a branch and switch to this new branch. Equivalent to 'git branch <branch name>' and 'git checkout <branch name>'. only use 'git branch' will display all branch and branch name with * in front it is this branch. Use 'git branch -d <branch name>' to delete the branch.
+2. git branch -b <branch name>, this command create a branch and switch to this new branch. Equivalent to 'git branch <branch name>' and 'git checkout <branch name>'. only use 'git branch' will display all branch and branch name with * in front it is this branch. Use 'git branch -d <branch name>' to delete the branch. 'git branch -D <branch name>' can delete force
 
-3. this command is same with git switch -c <branch name>. Use git switch <branch name> can switch branch. But check branch still use 'git branch'
+3. this command is same with 'git switch -c <branch name>'. Use 'git switch <branch name>' can switch branch. But check branch still use 'git branch'
 
 4. 'git merge <branch name>', this command merge a branch to master branch. When merge a changed branch to a changed master branch, this will conflict. We must solve this conflict by ourself. In different branch, change workfile will same change in other branch. Use 'git merge --no-ff' will keep merge record if in fast forward merge. 
 
