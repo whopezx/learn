@@ -7,3 +7,5 @@
 3. this command is same with git switch -c <branch name>. Use git switch <branch name> can switch branch. But check branch still use 'git branch'
 
 4. 'git merge <branch name>', this command merge a branch to master branch. When merge a changed branch to a changed master branch, this will conflict. We must solve this conflict by ourself. In different branch, change workfile will same change in other branch. Use 'git merge --no-ff' will keep merge record if in fast forward merge. 
+
+5. 'git stash', store some not finish work.
