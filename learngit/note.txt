@@ -9,3 +9,5 @@
 4. 'git merge <branch name>', this command merge a branch to master branch. When merge a changed branch to a changed master branch, this will conflict. We must solve this conflict by ourself. In different branch, change workfile will same change in other branch. Use 'git merge --no-ff' will keep merge record if in fast forward merge. 
 
 5. 'git stash', store some not finish work.
+
+6. 使用'git branch --set-upstream-to=origin/dev dev'将远程的dev分支和本地的dev分支链接。这样做的目的是从远程仓库克隆下来后，只有master/main分支，其他的分支并没有克隆下来，如果想要将其他的分支克隆下来（例如dev1分支），需要先在本地创建dev1分支，然后执行'git pull origin dev1'，但这样每次都需要执行这个命令，如果我们将本地的dev1分支和远程仓库的dev1仓库链接起来，那么就只需要执行'git pull'就可以将远程的仓库拉下来，同理'git push'也一样。在第一次执行'git push'时添加一个'-u'的参数可以将远程分支和本地的分支链接起来，这样后面就不需要执行'git push origin <branch name>'，只需要执行'git push'。也就是说远程分支和本地分支的链接简化了pull和push的命令。
