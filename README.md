@@ -8,8 +8,10 @@ Note, this repo just update to my Master finish.
 
 - 廖雪峰的git教程
 
-- 现代分子光化学（1）原理篇
-
 - 文章阅读笔记和其中的公式推导
 
 - 力扣解题代码
+
+- 喀兴林 - 高等量子力学
+
+- Nicholas J. Turro - 现代分子光化学（1）原理篇（吴骊珠等译）
