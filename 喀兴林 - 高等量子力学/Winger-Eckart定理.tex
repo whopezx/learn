@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}  % 公式
+\usepackage{geometry}  % 设置文档页面格式
+
+\geometry{a4paper,scale=0.9}
+\begin{document}
+\section*{Winger-Eckart定理}
+首先给出这个定理的内容，然后介绍一些前置知识，最后给出证明。
+
+这个定理实际上就是把k阶不可约（球谐）张量算符的矩阵元用角动量基表示出来，即
+\begin{equation}
+    \langle \tau j'm'|T_{q}^{(k)}|\tau jm\rangle 
+    = S_{mqj'm'}^{jk} \frac{1}{\sqrt{2j'+1}}\langle\tau' j'||T^{(k)}||\tau j\rangle
+    = (-1)^{j'-m'}
+    \begin{pmatrix}
+        j' & k & j\\
+        -m' & q & m
+    \end{pmatrix}
+    \langle\tau' j'||T^{(k)}||\tau j\rangle
+\end{equation}
+这个定理将只与对称性有关的部分分离出来体现在Clebsch-Gorden系数中，
+与相互作用有关的部分体现在约化矩阵元中。
+
+
+\section*{Clebsch-Gordan系数}
+CG系数实际上就是一个酉矩阵，将两个子空间直积的基矢$|j_1 m_1\rangle\otimes |j_2 m_2\rangle$
+变换为一个大空间的基矢$|j_1 j_2 jm\rangle$。因为这两个子空间的直积就是大空间
+所以这两个基矢实际上是同一个空间中的基矢，只是他们之间差一个酉变换，而CG系数就是这个酉变换的矩阵形式。
+
+在给定$j_1$和$j_2$的前提下，即$j_1$和$j_2$是固定的，并且可以取任意轨道角动量$L$或者$S$。
+由于$|j_1 m_1 j_2 m_2\rangle = |j_1 m_1\rangle\otimes |j_2 m_2\rangle$是基矢，
+则必然有完备关系
+\begin{equation}
+    \sum_{m_1}\sum_{m_2}|j_1 m_1 j_2 m_2\rangle\langle j_1 m_1 j_2 m_2| = 1
+\end{equation}
+上式没有对$j_1$和$j_2$求和是因为这两个量是给定的，根据完备关系可以得到
+\begin{equation}
+    \begin{aligned}
+        |j_1 j_2 jm\rangle
+        &= |j_1 j_2 jm\rangle\\
+        &= \sum_{m_1 m_2}|j_1 m_1 j_2 m_2\rangle\langle j_1 m_1 j_2 m_2|j_1 j_2 jm\rangle\\
+        &= \sum_{m_1 m_2}|j_1 m_1 j_2 m_2\rangle S_{m_1 m_2 jm}^{j_1 j_2}
+    \end{aligned}
+\end{equation}
+其中$S_{m_1 m_2 jm}^{jm}=\langle j_1 m_1 j_2 m_2|j_1 j_1 jm\rangle$就是Clebsch-Gorden系数，
+接下来通过推导给出具体形式。
+
+
+\section*{3j符号}
+
+
+
+
+
+\end{document}
