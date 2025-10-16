@@ -20,7 +20,7 @@
     \end{pmatrix}
     \langle\tau' j'||T^{(k)}||\tau j\rangle
 \end{equation}
-这个定理将只与对称性有关的部分分离出来体现在Clebsch-Gorden系数中，
+这个定理将只与对称性有关的部分分离出来体现在Clebsch-Gordan系数中，
 与相互作用有关的部分体现在约化矩阵元中。
 
 
@@ -28,8 +28,9 @@
 CG系数实际上就是一个酉矩阵，将两个子空间直积的基矢$|j_1 m_1\rangle\otimes |j_2 m_2\rangle$
 变换为一个大空间的基矢$|j_1 j_2 jm\rangle$。因为这两个子空间的直积就是大空间
 所以这两个基矢实际上是同一个空间中的基矢，只是他们之间差一个酉变换，而CG系数就是这个酉变换的矩阵形式。
+其中$j,j_1,j_2$都是总角动量的本征值，$m,m_1,m_2$都是角动量z方向投影算符的本征值。
 
-在给定$j_1$和$j_2$的前提下，即$j_1$和$j_2$是固定的，并且可以取任意轨道角动量$L$或者$S$。
+在给定$j_1$和$j_2$的前提下，即$j_1$和$j_2$是固定的，并且可以取任意轨道角动量$L,S$或者$L+S$。
 由于$|j_1 m_1 j_2 m_2\rangle = |j_1 m_1\rangle\otimes |j_2 m_2\rangle$是基矢，
 则必然有完备关系
 \begin{equation}
@@ -46,6 +47,120 @@ CG系数实际上就是一个酉矩阵，将两个子空间直积的基矢$|j_1 
 \end{equation}
 其中$S_{m_1 m_2 jm}^{jm}=\langle j_1 m_1 j_2 m_2|j_1 j_1 jm\rangle$就是Clebsch-Gorden系数，
 接下来通过推导给出具体形式。
+
+首先考虑$m=j$的特殊情况，用总自旋角动量z方向投影的升算符作用在$|j_1 j_2 j m\rangle$，即
+\begin{equation}
+    J_+ |j_1 j_2 j m\rangle
+\end{equation}
+由于$m=j$，所以有
+\begin{equation}
+    J_+ |j_1 j_2 j m\rangle = J_+ |j_1 j_2 j j\rangle = 0
+\end{equation}
+因为$m$最大取值就为$j$，最小为$-j$，所以使用升算符作用得到$0$，从子空间的角度看，可以得到
+\begin{equation}
+    J_+ |j_1 j_2 j j\rangle = (J_{1+}+J_{2+})\sum_{m_1 m_2}|j_1 m_1 j_2 m_2\rangle
+    S_{m_1 m_2 jj}^{j_1 j_2}\delta(m_1 + m_2, j)
+\end{equation}
+其中$\delta$函数是因为子空间的自旋角动量z方向投影算符的本征值的和
+应该等于大空间自旋角动量z方向投影算符的本征值。由上面的说明可以得到
+\begin{equation}
+    \begin{aligned}
+        0 &=J_+|j_1 j_2 jj\rangle =(J_{1+}+J_{2+})\sum_{m_1 m_2}|j_1 m_1 j_2 m_2\rangle
+        S_{m_1 m_2 jj}^{j_1 j_2}\delta(m_1 + m_2, j)\\
+        &= \sum_{m_1 m_2} |j_1 m_1+1 j_2 m_2\rangle\sqrt{(j_1-m_1)(j_1+m_1+1)}
+        S_{m_1 m_2 jj}^{j_1 j_2}\delta(m_1+m_2, j)\\
+        &+ \sum_{m_1 m_2} |j_1 m_1 j_2 m_2+1\rangle\sqrt{(j_2-m_2)(j_2+m_2+1)}
+        S_{m_1 m_2 jj}^{j_1 j_2}\delta(m_1+m_2, j)\\
+        &= \sum_{m_1 m'_2}|j_1 m_1+1 j_2 m'_2+1\rangle\sqrt{(j_1-m_1)(j_1+m_1+1)}
+        S_{m_1 m'_2+1 jj}^{j_1 j_2}\delta(m_1+m'_2+1, j)\\
+        &+ \sum_{m'_1 m_2} |j_1 m'_1+1 j_2 m_2+1\rangle\sqrt{(j_2-m_2)(j_2+m_2+1)}
+        S_{m'_1+1 m_2 jj}^{j_1 j_2}\delta(m'_1+1+m_2, j)\\
+        &= \sum_{m_1 m_2}|j_1 m_1+1 j_2 m_2+1\rangle\\
+        &\left(\sqrt{(j_1-m_1)(j_1+m_1+1)}S_{m_1 m_2+1 jj}^{j_1 j_2}
+        +\sqrt{(j_2-m_2)(j_2+m_2+1)}S_{m_1+1 m_2 jj}^{j_1 j_2}\right)\delta(m_1+m_2+1,j)
+    \end{aligned}
+\end{equation}
+其中最后一步将两项合并是因为狄拉克符号中只是换了一个符号表示，基矢没有变，即使考虑表象，基矢也不会变。
+由上面推导，可以得到一个递推关系，即
+\begin{equation}
+    \begin{aligned}
+        &\sqrt{(j_1-m_1)(j_1+m_1+1)}S_{m_1 m_2+1 jj}^{j_1 j_2}
+        = -\sqrt{(j_2-m_2)(j_2+m_2+1)}S_{m_1+1 m_2 jj}^{j_1 j_2}\delta(m_1+m_2+1,j)\\
+        \rightarrow
+        & S_{m_1 m_2+1 jj}^{j_1 j_2}
+        =-\frac{\sqrt{(j_2-m_2)(j_2+m_2+1)}}{\sqrt{(j_1-m_1)(j_1+m_1+1)}}
+        S_{m_1+1 m_2 jj}^{j_1 j_2}\delta(m_1+m_2+1,j)\\
+        \rightarrow 
+        & S_{m_1 m_2 jj}^{j_1 j_2}
+        = -\sqrt{\frac{(j_2-m_2+1)(j_2+m_2)}{(j_1-m_1)(j_1+m_1+1)}}
+        S_{m_1+1 m_2-1 jj}^{j_1 j_2}\delta(m_1+m_2,j)\\
+    \end{aligned}
+\end{equation}
+通过递推公式，将上式右边的$m_1$递推至最大值$j_1$，由于$m_1+m_2=m=j$所以将$m_1$递推至最大值时，$m_2=0$，
+不会小于最小值$-j$。
+所以可以得到
+\begin{equation}\label{eq:1}
+    \begin{aligned}
+        S_{m_1 m_2 jj}^{j_1 j_2}
+        &=(-1)^{j_1-m_1}\sqrt{\frac{(j_2-m_2+1)(j_2+m_2)}{(j_1-m_1)(j_1+m_1+1)}}\cdots
+        \sqrt{\frac{(j_2-m_2+j_1-m_1)(j_2+m_2-j_1+m_1+1)}{(j_1-m_1-j_1+m_1+1)(j_1+m_1+j_1-m_1)}}\\
+        &\qquad S_{j m_2-j_1+m_1 jj}^{j_1 j_2}\delta(m_1+m_2,j)\\
+        &=(-1)^{j_1-m_1}\sqrt{\frac{\frac{(j_2+j_1-j)!}{(j_2-m_2)!}\frac{(j_2+m_2)!}{(j_2-j_1+j)!}}
+        {\frac{(j_1-m_1)!}{1!}\frac{(2j_1)!}{(j_1+m_1)!}}}
+        S_{j j-j_1 jj}^{j_1 j_2}\delta(m_1+m_2,j)\\
+        &=(-1)^{j_1-m_1}\sqrt{\frac{(j_1+m_1)!(j_2+m_2)!}{(j_1-m_1)!(j_2-m_2)!}}
+        \sqrt{\frac{(j_1+j_2-j)!}{(j_2-j_1+j)!(2j_1)!}}S_{j j-j_1 jj}^{j_1 j_2}\\
+        &=(-1)^{j_1-m_1}\sqrt{\frac{(j_1+m_1)!(j_2+m_2)!}{(j_1-m_1)!(j_2-m_2)!}} S
+    \end{aligned}
+\end{equation}
+其中反复用到了$m_1+m_2=j$，$S$为
+\begin{equation}
+    S=\sqrt{\frac{(j_1+j_2-j)!}{(j_2-j_1+j)!(2j_1)!}}S_{j j-j_1 jj}^{j_1 j_2}
+\end{equation}
+$S$是一个与$m_1$和$m_2$无关的常数，可以利用$\langle j_1 j_2 jj|j_1 j_2 jj\rangle=1$来确定，即
+\begin{equation}
+    \begin{aligned}
+        \langle j_1 j_2 jj|j_1 j_2 jj\rangle
+        &= \sum_{m'_1 m'_2}\sum_{m_1 m_2}\langle j_1 m_1 j_2 m_2|j_1 m_1 j_2 m_2\rangle
+        [S_{m'_1 m'_2 jm}^{j_1 j_2}]^{\dagger}S_{m_1 m_2 jm}^{j_1 j_2}
+        \delta(m'_1+m'_2,j)\delta(m_1+m_2,j)\\
+        &= \sum_{m'_1 m'_2}\sum_{m_1 m_2}\delta_{m'_1 m_1}\delta_{m'_2 m_2}
+        [S_{m'_1 m'_2 jm}^{j_1 j_2}]^{\dagger}S_{m_1 m_2 jm}^{j_1 j_2}
+        \delta(m'_1+m'_2,j)\delta(m_1+m_2,j)\\
+        &= \sum_{m_1 m_2}|S_{m_1 m_2 jm}^{j_1 j_2}|^2 \delta(m_1+m_2,j)\\
+        &= 1
+    \end{aligned}
+\end{equation}
+将\ref{eq:1}式代入上式得到
+\begin{equation}\label{eq:3}
+    \begin{aligned}
+        1 &= \sum_{m_1 m_2}\frac{(j_1+m_1)!(j_2+m_2)!}{(j_1-m_1)!(j_2-m_2)!}S^2\\
+        &= \sum_{m_1 j-m_1}\frac{(j_1+m_1)!(j_2+j-m_1)!}{(j_1-m_1)!(j_2-j+m_1)!}S^2\\
+        &= \sum_{m_1}\frac{(j_1+m_1)!(j_2+j-m_1)!}{(j_1-m_1)!(j_2-j+m_1)!}S^2\\
+    \end{aligned}
+\end{equation}
+根据下式（书上的一个等式关系）可以将\ref{eq:3}化简
+\begin{equation}\label{eq:2}
+    \frac{(a+b+1)!(b-d)!}{(c+d)!(a+b-c-d+1)!}=\sum_{s=0}^{\infty}\frac{(a+s)!(b-s)!}{(c+s)!(d-s)!}
+\end{equation}
+将\ref{eq:2}代入\ref{eq:3}可以得到
+\begin{equation}
+    \begin{aligned}
+        1&=\frac{(j_1+j_2+j+1)!(j_1-j_2+j)!(j_2-j_1+j)!}{(j_1+j_2+j)!(j_1+j_2+j-j_2+j-j_1+1)!}S^2\\
+        &=\frac{(j+j_1+j_2+1)!(j+j_1-j_2)!(j-j_1+j_2)!}{(j+j_1+j_2)!(2j+1)!}S^2\\
+        S^2 &= \frac{(j+j_1+j_2)!(2j+1)!}{(j+j_1+j_2+1)!(j+j_1-j_2)!(j-j_1+j_2)!}\\
+        S &= \sqrt{\frac{(j+j_1+j_2)!(2j+1)!}{(j+j_1+j_2+1)!(j+j_1-j_2)!(j-j_1+j_2)!}}
+    \end{aligned}
+\end{equation}
+将上式代入\ref{eq:1}可以得到
+\begin{equation}
+    S_{m_1 m_2 jj}^{j_1 j_2} = (-1)^{j_1-m_1}\sqrt{\frac{(j_1+m_1)!(j_2+m_2)!}{(j_1-m_1)!(j_2-m_2)!}}
+    \sqrt{\frac{(j+j_1+j_2)!(2j+1)!}{(j+j_1+j_2+1)!(j+j_1-j_2)!(j-j_1+j_2)!}}
+    \delta(m_1+m_2,j)
+\end{equation}
+
+
+
 
 
 \section*{3j符号}
