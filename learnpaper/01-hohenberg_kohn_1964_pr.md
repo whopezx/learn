@@ -94,4 +94,23 @@ $$
 
 ---
 
-第二部分给出了一个具体的例子，在这个例子中给出具体的$G[n]$和$\overline{g}_r[n]$的形式。
+第二部分给出了一个具体的例子，在这个例子中首先给出具体的$G[n]$和$\overline{g}_r[n]$的形式。
+
+这个例子是几乎均匀的电子气，所以电子密度可以定义为
+$$
+    n(r)=n_0+\tilde{n}(r)
+$$
+其中$\tilde{n}(r)$是一个微扰，满足$\tilde{n}(r)/n(r)<< 1$，并且有
+$$
+    \int \tilde{n}(r)dr = 0
+$$
+所以，利用泛函的泰勒展开有
+$$
+\begin{aligned}
+    G[n]&=G[n_0+\tilde{n}(r)]\\
+    &=G[n_0]+\int K(r)\tilde{n}(r)dr\\
+    &+\int\int K(r;r')\tilde{n}(r)\tilde{n}(r')dr dr'\\
+    &+\int\int\int K(r;r';r'')\tilde{n}(r)\tilde{n}(r')\tilde{n}(r'')drdr'dr''+\cdots
+\end{aligned}
+$$
+其中$K$是不同阶的泛函导数。
