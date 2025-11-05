@@ -2,7 +2,9 @@
 
 all of my learn including books, Internet, rearch and so on will put them in this repository.
 
-Note, this repo just update to my Master finish.
+Note, this repo just update to my PhD. finish.
+
+**If you have any suggestions, please raise an issue.**
 
 # Include
 
@@ -10,7 +12,7 @@ Note, this repo just update to my Master finish.
 
 - 文章阅读笔记和其中的公式推导
 
-- 力扣解题代码
+- Leetcode problem solution
 
 - 喀兴林 - 高等量子力学
 

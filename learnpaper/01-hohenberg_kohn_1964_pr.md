@@ -113,4 +113,17 @@ $$
     &+\int\int\int K(r;r';r'')\tilde{n}(r)\tilde{n}(r')\tilde{n}(r'')drdr'dr''+\cdots
 \end{aligned}
 $$
-其中$K$是不同阶的泛函导数。
+其中$K$是不同阶的泛函导数$\frac{\delta^i G[n]}{\delta n(r_1)\cdots\delta n(r_i)}$。由于这里考虑几乎均匀的自由电子气，所以可以认为几乎没有外势，或者外势几乎均匀，进而可以近似认为体系是平移不变的。
+平移不变性可以说明
+$$
+    G[n(r)] = G[n(r+R)]\quad \forall R
+$$
+而对某一点$r$加一个额外的扰动，$G[n(r+\Delta r)]$的变化都是相同的，这里可以按照导数的定义来理解，
+$$
+    \lim_{\Delta r\rightarrow 0 }\frac{G[n(r+\Delta r)]-G[n(r)]}{\Delta r}
+$$
+由于在任意一点加微小扰动，$G[n(r+\Delta r)]$都仅与$\Delta r$有关，则上式分子仅与$\Delta r$有关，除以$\Delta r$后仅剩一个常数，所以实际上一阶泛函导数为常数，所以
+$$
+    \int K(r)\tilde{n}(r)dr = \int C\ \tilde{n}(r)dr = C\int\tilde{n}(r)dr=0
+$$
+其中用到了几乎均匀电子气的约束$\int\tilde{n}(r)dr=0$
