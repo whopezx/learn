@@ -48,7 +48,7 @@ CG系数实际上就是一个酉矩阵，将两个子空间直积的基矢$|j_1 
 其中$S_{m_1 m_2 jm}^{jm}=\langle j_1 m_1 j_2 m_2|j_1 j_1 jm\rangle$就是Clebsch-Gorden系数，
 接下来通过推导给出具体形式。
 
-首先考虑$m=j$的特殊情况，用总自旋角动量z方向投影的升算符作用在$|j_1 j_2 j m\rangle$，即
+首先考虑$m=j$的特殊情况，用总自旋角动量z方向投影的升算符$J_+$作用在$|j_1 j_2 j m\rangle$，即
 \begin{equation}
     J_+ |j_1 j_2 j m\rangle
 \end{equation}
@@ -85,15 +85,15 @@ CG系数实际上就是一个酉矩阵，将两个子空间直积的基矢$|j_1 
 \begin{equation}
     \begin{aligned}
         &\sqrt{(j_1-m_1)(j_1+m_1+1)}S_{m_1 m_2+1 jj}^{j_1 j_2}
-        = -\sqrt{(j_2-m_2)(j_2+m_2+1)}S_{m_1+1 m_2 jj}^{j_1 j_2}\delta(m_1+m_2+1,j)\\
+        = -\sqrt{(j_2-m_2)(j_2+m_2+1)}S_{m_1+1 m_2 jj}^{j_1 j_2}\\
         \rightarrow
         & S_{m_1 m_2+1 jj}^{j_1 j_2}
         =-\frac{\sqrt{(j_2-m_2)(j_2+m_2+1)}}{\sqrt{(j_1-m_1)(j_1+m_1+1)}}
-        S_{m_1+1 m_2 jj}^{j_1 j_2}\delta(m_1+m_2+1,j)\\
+        S_{m_1+1 m_2 jj}^{j_1 j_2}\\
         \rightarrow 
         & S_{m_1 m_2 jj}^{j_1 j_2}
         = -\sqrt{\frac{(j_2-m_2+1)(j_2+m_2)}{(j_1-m_1)(j_1+m_1+1)}}
-        S_{m_1+1 m_2-1 jj}^{j_1 j_2}\delta(m_1+m_2,j)\\
+        S_{m_1+1 m_2-1 jj}^{j_1 j_2}\\
     \end{aligned}
 \end{equation}
 通过递推公式，将上式右边的$m_1$递推至最大值$j_1$，由于$m_1+m_2=m=j$所以将$m_1$递推至最大值时，$m_2=0$，
@@ -104,10 +104,10 @@ CG系数实际上就是一个酉矩阵，将两个子空间直积的基矢$|j_1 
         S_{m_1 m_2 jj}^{j_1 j_2}
         &=(-1)^{j_1-m_1}\sqrt{\frac{(j_2-m_2+1)(j_2+m_2)}{(j_1-m_1)(j_1+m_1+1)}}\cdots
         \sqrt{\frac{(j_2-m_2+j_1-m_1)(j_2+m_2-j_1+m_1+1)}{(j_1-m_1-j_1+m_1+1)(j_1+m_1+j_1-m_1)}}\\
-        &\qquad S_{j m_2-j_1+m_1 jj}^{j_1 j_2}\delta(m_1+m_2,j)\\
+        &\qquad S_{j m_2-j_1+m_1 jj}^{j_1 j_2}\\
         &=(-1)^{j_1-m_1}\sqrt{\frac{\frac{(j_2+j_1-j)!}{(j_2-m_2)!}\frac{(j_2+m_2)!}{(j_2-j_1+j)!}}
         {\frac{(j_1-m_1)!}{1!}\frac{(2j_1)!}{(j_1+m_1)!}}}
-        S_{j j-j_1 jj}^{j_1 j_2}\delta(m_1+m_2,j)\\
+        S_{j j-j_1 jj}^{j_1 j_2}\\
         &=(-1)^{j_1-m_1}\sqrt{\frac{(j_1+m_1)!(j_2+m_2)!}{(j_1-m_1)!(j_2-m_2)!}}
         \sqrt{\frac{(j_1+j_2-j)!}{(j_2-j_1+j)!(2j_1)!}}S_{j j-j_1 jj}^{j_1 j_2}\\
         &=(-1)^{j_1-m_1}\sqrt{\frac{(j_1+m_1)!(j_2+m_2)!}{(j_1-m_1)!(j_2-m_2)!}} S
@@ -121,7 +121,7 @@ $S$是一个与$m_1$和$m_2$无关的常数，可以利用$\langle j_1 j_2 jj|j_
 \begin{equation}
     \begin{aligned}
         \langle j_1 j_2 jj|j_1 j_2 jj\rangle
-        &= \sum_{m'_1 m'_2}\sum_{m_1 m_2}\langle j_1 m_1 j_2 m_2|j_1 m_1 j_2 m_2\rangle
+        &= \sum_{m'_1 m'_2}\sum_{m_1 m_2}\langle j_1 m'_1 j_2 m'_2|j_1 m_1 j_2 m_2\rangle
         [S_{m'_1 m'_2 jm}^{j_1 j_2}]^{\dagger}S_{m_1 m_2 jm}^{j_1 j_2}
         \delta(m'_1+m'_2,j)\delta(m_1+m_2,j)\\
         &= \sum_{m'_1 m'_2}\sum_{m_1 m_2}\delta_{m'_1 m_1}\delta_{m'_2 m_2}
@@ -136,7 +136,7 @@ $S$是一个与$m_1$和$m_2$无关的常数，可以利用$\langle j_1 j_2 jj|j_
     \begin{aligned}
         1 &= \sum_{m_1 m_2}\frac{(j_1+m_1)!(j_2+m_2)!}{(j_1-m_1)!(j_2-m_2)!}S^2\\
         &= \sum_{m_1 j-m_1}\frac{(j_1+m_1)!(j_2+j-m_1)!}{(j_1-m_1)!(j_2-j+m_1)!}S^2\\
-        &= \sum_{m_1}\frac{(j_1+m_1)!(j_2+j-m_1)!}{(j_1-m_1)!(j_2-j+m_1)!}S^2\\
+        &= \sum_{m_1}\frac{(j_1+m_1)!(j_2+j-m_1)!}{(j_1-m_1)!(j_2-j+m_1)!}S^2
     \end{aligned}
 \end{equation}
 根据下式（书上的一个等式关系）可以将\ref{eq:3}化简
