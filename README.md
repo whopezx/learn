@@ -17,3 +17,5 @@ Note, this repo just update to my PhD. finish.
 - 喀兴林 - 高等量子力学
 
 - Nicholas J. Turro - 现代分子光化学（1）原理篇（吴骊珠等译）
+
+- Qiming Sun - Python for Quantum Chemistry

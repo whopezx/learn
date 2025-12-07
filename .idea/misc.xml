@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="tddft" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="tddft" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="pfqc" project-jdk-type="Python SDK" />
 </project>
