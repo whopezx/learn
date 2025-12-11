@@ -14,7 +14,7 @@ for name in imports:
 <module 'pyscf' from '/home/whope/miniconda3/envs/pfqc/lib/python3.10/site-packages/pyscf/__init__.py'>
 <module 'numpy' from '/home/whope/miniconda3/envs/pfqc/lib/python3.10/site-packages/numpy/__init__.py'>
 '''
-# 在网上搜了以下pipreqs这个模块，发现一般使用这个模块来生成requirement文件，在当前环境下输入`pipreqs 。/`即可
+# 在网上搜了以下pipreqs这个模块，发现一般使用这个模块来生成requirement文件，在当前环境下输入`pipreqs ./`即可
 
 
 # 使用sys，查看site-packages的路径，发现这个路径中没有'.cpython-...'之类的文件，应该是目前安装的模块中没有依赖C或者C++的
