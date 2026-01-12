@@ -2,8 +2,6 @@
 
 all of my learn including books, Internet, rearch and so on will put them in this repository.
 
-Note, this repo just update to my PhD. finish.
-
 **If you have any suggestions, please raise an issue.**
 
 # Include
